@@ -10,6 +10,24 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -55,6 +73,25 @@
                 <span class="image object"><img src="images/aboutme.jpeg" alt=""/></span>
             </section>
         </div>
+    </div>
+
+    <div class="gallery">
+        <div class="project">
+            <img src="project1-icon.png" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Description of Project 1</p>
+        </div>
+        <div class="project">
+            <img src="project2-icon.png" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Description of Project 2</p>
+        </div>
+        <div class="project">
+            <img src="project3-icon.png" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>Description of Project 3</p>
+        </div>
+        <!-- Add more project divs as needed -->
     </div>
 
 
