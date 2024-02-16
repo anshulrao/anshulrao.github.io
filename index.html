@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     <title>PORTFOLIO</title>
@@ -11,30 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+            position: relative;
+        }
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             gap: 20px;
-            padding: 0 20px; /* Add padding to the left and right sides */
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         .project {
             text-align: center;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
+            width: calc(50% - 10px); /* Set width for each project, accounting for the gap */
         }
         .project img {
-            max-width: 100%;
-            height: auto;
+            width: 200px; /* Set a fixed width for the images */
+            height: 140px; /* Set a fixed height for the images */
             border-radius: 5px;
         }
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            color: #666;
+        .tags {
+            margin-top: 10px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+        }
+        .tag-java {
+            background-color: #989898;
+        }
+        .tag-r {
+            background-color: #6faac3;
+        }
+        .tag-python {
+            background-color: #ff6696;
+        }
+        .tag-ml {
+            background-color: #f28779;
+        }
+        .tag-nn {
+            background-color: #E08585;
+        }
+        .tag-ds {
+            background-color: #daa520;
+        }
+        .tag-individual {
+            background-color: #859ce0;
+        }
+        .tag-group {
+            background-color: #94b38f;
+        }
+        .tag-clustering {
+            background-color: #b3b300;
+        }
+        .tag-academic {
+            background-color: #e78c4b;
+        }
+        .tag-independent {
+            background-color: #00B2B3;
+        }
+        .tag-algorithms {
+            background-color: #0073E6;
+        }
+        .tag-nlp {
+            background-color: #5cdb8a;
+        }
+        .tags span {
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-right: 5px;
+            margin-bottom: 5px; /* Add margin bottom to create space between tags */
+            color: #fff; /* Text color for tags */
         }
     </style>
 
@@ -62,66 +116,173 @@
             <!-- Banner -->
             <section id="banner">
                 <div class="content">
-                    <header>
+                    <header style="display: flex; justify-content: space-between; align-items: center;">
+                      <div style="display: inline-block;">
                         <h1>About Me</h1>
                         <p>Experienced Software Developer | Data Science Graduate</p>
+                      </div>
+                      <img src="images/aboutme.jpeg" alt="" width="145" height="145" style="display: inline-block;">
                     </header>
-                    <p>I am Anshul Rao, currently working at JP Morgan Chase & Co. as Software Engineer III.
-                        Previously I have worked as a Senior Software Developer for four years at
-                        the hedge fund The D.E. Shaw Group in the Quant Data team, and I’ve also interned at Amazon for
-                        six months as a Software Development Engineer. I have always had a curious and analytical mind
-                        and my former manager used to say that I have an eye for detail as I would regularly notice
-                        small nuances in data that others missed. Hence, realizing that working with data excites me, I
-                        decided to do post-graduation and acquire advanced knowledge in data science.
-                        I completed Master's in Data Science at Northeastern University in May 2023. As part of
-                        the coursework there, at a high level I can say that I learned various machine learning
-                        techniques to build models. I was also a Research Assistant at the university working on a
-                        project focused on studying how informative social media is for predicting prices. Presently, I
-                        am actively looking for opportunities where I can use my honed software development expertise
-                        along with my newly acquired data science skills to take my career to the next level.</p>
+                    <p><br/>I am Anshul Rao, a Software Engineer III at JP Morgan Chase & Co. Previously, I spent four years as a Senior Software Developer at The D.E. Shaw Group in the Quant Data team. Prior to that, I interned at Amazon for six months as a Software Development Engineer.<br/>
+                        Known for my curious and analytical mind, I possess a keen eye for detail, often uncovering nuanced insights in data that others may overlook. This passion for working with data led me to pursue a Master's in Data Science at Northeastern University, which I completed in May 2023.<br/>
+                        During my academic journey, I delved deep into various machine learning techniques, honing my skills in model building. Additionally, I served as a Research Assistant, contributing to a project centered around analyzing the predictive power of social media on market prices.<br/>
+                        Currently, I am seeking opportunities that allow me to leverage my extensive software development background alongside my newfound expertise in data science, propelling my career to new heights.</p>
                 </div>
-                <span class="image object"><img src="images/aboutme.jpeg" alt=""/></span>
             </section>
         </div>
+<hr style="border-color: #ccc;">
+        <div class="content">
+                    <header>
+                      <div>
+                        <h2 style="text-align: center;">PROJECT GALLERY</h2>
+                          <p style="text-align: center;">NOTE: Detailed project reports and GitHub repositories are accessible through the menu on the left.</p>
+                      </div>
+                    </header>
+                    </div>
 
-	<!--
 	<div class="gallery">
-            <div class="project">
-                <img src="images/youtube.png" alt="Project 1">
-                <h3>Unlocking Insights from YouTube Channel and Video Data</h3>
-                <p>The project delved into predictive modeling and clustering analysis on YouTube metadata, revealing insights into content popularity and community dynamics. With diverse data ranging from textual to numeric, the project explored the intricate landscape of YouTube content, extracting valuable patterns and trends to inform future strategies and decisions.</p>
-            </div>
-            <div class="project">
-                <img src="images/cnn.png" alt="Project 2">
-                <h3>Image Classification of American Sign Language using CNN</h3>
-                <p>The project centered on utilizing convolutional neural networks to classify images of American Sign Language (ASL) letters with exceptional accuracy levels exceeding 98%. Employing both custom-built and pre-trained CNN models, including GoogLeNet, it culminated in a real-time motion classification application, analyzing webcam video input.</p>
-            </div>
-            <div class="project">
-                <img src="images/rail.png" alt="Project 3">
-                <h3>RailSafe: Predictive Analytics Models for Mitigating Railroad Accidents</h3>
-                <p>The project focused on developing models for accident analysis in the railroad industry. It included classification of accident cause codes, prediction of accident costs, and forecasting accident frequency. These models yielded accurate predictions, providing valuable insights for enhancing safety and efficiency in railroad operations.</p>
-            </div>
-            <div class="project">
-                <img src="images/pm.png" alt="Project 1">
-                <h3>Project Manager</h3>
-                <p>The project developed a straightforward application facilitating project assignment to employees. By inputting employee skills and project requirements, the application leverages a customized bipartite matching algorithm internally to allocate projects effectively. Ultimately, it delivers precise project assignments based on predetermined criteria</p>
-	    </div>
-            <div class="project">
-                <img src="images/err.png" alt="Project 2">
-                <h3>Error Compass</h3>
-                <p>Locate error messages closely matching the provided input from a mapping containing error messages paired with corresponding resolutions. This tool assists in directing users to the appropriate actions needed when encountering specific errors.</p>
-	    </div>
-            <div class="project">
-                <img src="images/restaurant.png" alt="Project 3">
-                <h3>Online Restaurant Service</h3>
-                <p>The project aimed to build a distributed, scalable online restaurant service, employing distributed algorithms for mutual exclusion, group communication, and replicated data management. Key components like OrderService and KitchenService facilitated efficient order handling and menu management, ensuring fault tolerance and scalability in restaurant operations.</p>
+        <div class="project">
+            <img src="images/youtube.png" alt="Project 1">
+            <h3>Unlocking Insights from YouTube Channel and Video Data</h3>
+            <p>Delved into predictive modeling and clustering analysis on YouTube metadata, revealing insights into content popularity and community dynamics. With diverse data ranging from textual to numeric, the project explored the intricate landscape of YouTube content, extracting valuable patterns and trends to inform future strategies and decisions.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-clustering">Clustering</span>
+                <span class="tag-group">Group</span>
+                <span class="tag-academic">Academic</span>
             </div>
         </div>
-
-        <footer>
-            For detailed project reports and GitHub repos, refer to the left sidebar to explore.
-        </footer>
-	-->
+        <div class="project">
+            <img src="images/cnn.png" alt="Project 2">
+            <h3>Image Classification of American Sign Language using CNN</h3>
+            <p>Utilized convolutional neural networks to classify images of American Sign Language (ASL) letters. Constructed and trained a CNN with three convolutional layers and trained another using the pre-trained GoogLeNet model. The fine-tuned model reached an impressive accuracy of 99.97%. Furthermore, as a concluding step, created a simple application utilizing the model to classify real-time motions from webcam footage.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-nn">Neural Networks</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/rail.png" alt="Project 3">
+            <h3>RailSafe: Predictive Analytics Models for Mitigating Railroad Accidents</h3>
+            <p>Developed models for accident analysis in the railroad industry. It included classification of accident cause codes, prediction of accident costs, and forecasting accident frequency. These models yielded accurate predictions, providing valuable insights for enhancing safety and efficiency in railroad operations.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-group">Group</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/pm.png" alt="Project 4">
+            <h3>Project Manager</h3>
+            <p>Developed a straightforward application facilitating project assignment to employees. By inputting employee skills and project requirements, the application leverages a customized bipartite matching algorithm internally to allocate projects effectively. Ultimately, it delivers precise project assignments based on predetermined criteria.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-algorithms">Algorithms</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/ds.png" alt="Project 5">
+            <h3>Online Restaurant Service</h3>
+            <p>Built a distributed, scalable online restaurant service, employing distributed algorithms for mutual exclusion, group communication, and replicated data management. Key components like OrderService and KitchenService facilitated efficient order handling and menu management, ensuring fault tolerance and scalability in restaurant operations.</p>
+            <div class="tags">
+                <span class="tag-java">Java</span>
+                <span class="tag-algorithms">Algorithms</span>
+                <span class="tag-ds">Scalable Distributed Systems</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/err.png" alt="Project 6">
+            <h3>Error Compass</h3>
+            <p>Discover closely matching error messages from a mapping that pairs them with solutions. This tool effectively guides users in addressing specific errors by utilizing cosine similarity to identify the top five closest matches. Additionally, it offers the functionality to record both error messages and their corresponding resolutions in the mapping file.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-nlp">NLP</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/toxic.png" alt="Project 7">
+            <h3>Toxic Comment Classification</h3>
+            <p>Implemented two multi-label classification models namely Multinomial Naive Bayes (MNB) and Long Short-Term Memory (LSTM) models to classify Wikipedia comments into six categories. The MNB model produced an accuracy of 86 percent on the test data and hamming loss of 0.031 whereas the LSTM model produced an accuracy of 99 percent on the test data and loss of 0.259.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-nlp">NLP</span>
+                <span class="tag-nn">Neural Network</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/som.png" alt="Project 8">
+            <h3>Study of Self-Organizing Maps (SOM) Algorithm</h3>
+            <p>Explored the self-organizing map algorithm and developed a basic Python implementation to illustrate its core principles. Applied SOM for topic modeling on a scraped textual dataset related to stocks. Furthermore, analyzed two recent papers utilizing SOM and elucidated its various applications.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-clustering">Clustering</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/pnp.png" alt="Project 9">
+            <h3>Popularity and Profits</h3>
+            <p>A minor research project focusing mainly on the relationship between transient popularity of a product and the stock performance of the parent company owning that product. Google search interest data served as a measure of popularity. The analysis uncovered some intriguing insights.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/loan.png" alt="Project 10">
+            <h3>Loan Default Analysis and Prediction</h3>
+            <p>Conducted thorough exploratory data analysis (EDA) on Lending Club's loan data, examining predictors like customer credit background, demographics, loan specifications, and borrower employment history. The EDA aimed to understand the predictors' influence on loan default. Following this analysis, binary classification models were developed using Logistic Regression, Random Forest, XGBoost, and SVM algorithms to predict loan repayment outcomes.</p>
+            <div class="tags">
+                <span class="tag-r">R</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-group">Group</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/community.png" alt="Project 11">
+            <h3>Analysis of Community Detection Algorithms</h3>
+            <p>Three community detection algorithms—Girvan-Newman algorithm, Louvain method, and hierarchical agglomerative clustering were implemented and the performance of all three on the same social network data was compared. The data used is the social circle dataset of Facebook from the Stanford Network Analysis Project, comprising an undirected graph with around 4,000 nodes and 88,000 edges.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-algorithms">Algorithms</span>
+                <span class="tag-clustering">Clustering</span>
+                <span class="tag-group">Group</span>
+                <span class="tag-academic">Academic</span>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/cs.png" alt="Project 12">
+            <h3>Customer Segmentation</h3>
+            <p>Conduct a comprehensive exploratory data analysis (EDA) on a transactional dataset comprising transactions from a UK-based and registered non-store online retail business over a specific period. Additionally, apply KMeans clustering to segment customers based on their transactional behavior.</p>
+            <div class="tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-ml">Machine Learning</span>
+                <span class="tag-clustering">Clustering</span>
+                <span class="tag-individual">Individual</span>
+                <span class="tag-independent">Independent</span>
+            </div>
+        </div>
+        </div>
 
     </div>
 
@@ -175,12 +336,12 @@
                 </ul>
             </nav>
 
-
-            <!-- Footer -->
+            <!--
             <footer id="footer">
                 <p class="copyright">&copy; Anshul Rao. All rights reserved. Design: <a
                         href="https://html5up.net">HTML5 UP</a>.</p>
             </footer>
+            -->
         </div>
     </div>
 
