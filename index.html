@@ -15,6 +15,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            padding: 0 20px; /* Add padding to the left and right sides */
         }
         .project {
             text-align: center;
@@ -27,7 +28,16 @@
             height: auto;
             border-radius: 5px;
         }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
+
 </head>
 <body class="is-preload">
 
@@ -75,23 +85,28 @@
         </div>
 
 	<div class="gallery">
-	    <div class="project">
-	        <img src="project1-icon.png" alt="Project 1">
-	        <h3>Project 1</h3>
-	        <p>Description of Project 1</p>
-	    </div>
-	    <div class="project">
-	        <img src="project2-icon.png" alt="Project 2">
-	        <h3>Project 2</h3>
-	        <p>Description of Project 2</p>
-	    </div>
-	    <div class="project">
-	        <img src="project3-icon.png" alt="Project 3">
-	        <h3>Project 3</h3>
-	        <p>Description of Project 3</p>
-	    </div>
-	<!-- Add more project divs as needed -->
+            <div class="project">
+                <img src="project1-icon.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="project">
+                <img src="project2-icon.png" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+            <div class="project">
+                <img src="project3-icon.png" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of Project 3</p>
+            </div>
+            <!-- Add more project divs as needed -->
         </div>
+
+        <footer>
+            For detailed project reports and GitHub repos, refer to the left sidebar to explore.
+        </footer>
+
     </div>
 
 
